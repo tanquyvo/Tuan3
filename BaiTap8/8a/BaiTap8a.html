@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8a - Heroes of JavaScript and HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">	
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #222;
+    background-color: #ffffff;
+}
+
+/* I. KHUNG CHỨA LỚN */
+#root {
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #cccccc;
+    font-size: 14px;
+}
+
+/* II. HEADER */
+.header {
+    margin: 0 0 25px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* III. DESCRIPTION GIỚI THIỆU */
+#root > .description {
+    margin: 0 15px 55px;
+    padding: 20px 25px;
+    background-color: #777777;
+    color: #222222;
+    border: 3px solid #ffffff;
+    border-radius: 14px;
+    line-height: 1.45;
+    text-align: left;
+}
+
+/* DÒNG GIỚI THIỆU 4 NHÂN VẬT */
+.remark {
+    margin: 0 0 30px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* IV. DANH SÁCH HERO */
+.heroes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+.hero-item {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 23%;
+    height: 245px;
+    margin: 0 1%;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* V. TIÊU ĐỀ TỪNG HERO */
+.hero-item h2 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+}
+
+/* VI. THẺ MÔ TẢ PHỦ LÊN HÌNH */
+.hero-item .description {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 135px;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgba(75, 75, 75, 0.78);
+    color: #111111;
+    border: 2px solid #ffffff;
+    text-align: justify;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+/* VII. HÌNH ẢNH HERO */
+.hero-item img {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    border-radius: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    #root {
+        padding: 18px;
+    }
+
+    .hero-item {
+        width: 46%;
+        margin: 0 1% 20px;
+    }
+
+    .header {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-item {
+        width: 90%;
+        margin-bottom: 25px;
+    }
+
+    #root > .description {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+    }
+}
+
+	</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+    <div id="root">
+        <h1 class="header">
+			<i class="fas fa-address-card"></i>
+			Heroes of JavaScript and HTML</h1>
+			
+        <p class="description">
+			<i class="fab fa-android"></i>
+            <strong>Heroes of JavaScript and HTML</strong> is a "Heroes of Might and Magic"-like game, but for code nerds.
+            Each hero has its unique coding abilities and based on them he can develop software applications.
+        </p>
+        <div class="container">
+            <p class="remark">Currently the game has only four hero types:</p>
+            <ul class="heroes-list">
+                <li class="hero-item">
+                    <h2>Front-end Developer</h2>
+                    <p class="description">
+                        Being the ultra masters of JavaScript, the order of the <strong>Front-enders</strong> is known to
+                        create user interfaces, that fill the users with absolute pleasure
+                    </p>
+                    <img class="animated infinite bounce delay-2s" src="imgs/fe.png" alt="">
+                </li>
+                <li class="hero-item">
+                    <h2>Mobile Developer</h2>
+                    <p class="description">
+                        The movement of the <strong>Mobile developers</strong> is brand new, yet in their short time they
+                        already manage to amaze the peoples of the worlds and beyond with create applications.
+                    </p>
+                    <img src="imgs/mobile.jpg" alt="">
+                </li>
+                <li class="hero-item">
+                    <h2>Web Developer</h2>
+                    <p class="description">
+                        The sect of the <strong>Web developers</strong> is the oldest there is. They prefer the old ways and rarely move to modern stuff. The Old Religion gives them power of small gods. 
+                    </p>
+                    <img src="imgs/web.jpg" alt="">
+                </li>
+                <li class="hero-item">
+                    <h2>QA Engineer</h2>
+                    <p class="description">
+                        The <strong>QAs</strong> are the desiders of fates! They always have the final word, and all gods and mortals are bound to obey them.
+                    </p>
+                    <img src="imgs/qa.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

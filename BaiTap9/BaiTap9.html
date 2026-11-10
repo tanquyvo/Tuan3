@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9 - Font Awesome 5</title>
+
+    <!-- Font Awesome 5.15.4 CDN -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #222222;
+        }
+
+        /* Khung portfolio */
+        .portfolio {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 38px 28px 42px;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        /* Tiêu đề */
+        .portfolio h2 {
+            margin: 0 0 12px;
+            font-size: 25px;
+            font-weight: 700;
+            color: #222222;
+        }
+
+        .title-line {
+            width: 46px;
+            height: 3px;
+            margin: 0 auto 24px;
+            background-color: #159b91;
+            border-radius: 3px;
+        }
+
+        /* Danh mục portfolio */
+        .list-tab {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 9px 18px;
+            margin: 0 0 28px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .list-tab li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Tùy chỉnh fa-ul/fa-li để icon nằm cùng hàng với chữ */
+        .list-tab.fa-ul {
+            margin-left: 0;
+        }
+
+        .list-tab .fa-li {
+            position: static;
+            display: inline-block;
+            width: auto;
+            line-height: inherit;
+            text-align: center;
+        }
+
+        .list-tab a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 9px;
+            color: #333333;
+            font-size: 13px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: color 0.25s ease, background-color 0.25s ease;
+        }
+
+        .list-tab a i {
+            color: #159b91;
+            font-size: 13px; /* Sizing Icons */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .list-tab a:hover,
+        .list-tab a.active {
+            color: #159b91;
+            background-color: #e5f3f1;
+        }
+
+        /* Rotating / Flipping Icons khi hover */
+        .list-tab a:hover i {
+            color: #087d75;
+            transform: rotate(12deg) scale(1.15);
+        }
+
+        /* Danh sách hình ảnh */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .gallery li {
+            min-width: 0;
+        }
+
+        .gallery a {
+            position: relative;
+            display: flex;
+            min-height: 180px;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #98c978;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Icon lớn minh họa cho từng portfolio item */
+        .gallery-icon {
+            display: block;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 38px; /* Sizing Icons */
+            transition: transform 0.35s ease;
+        }
+
+        .gallery-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+            letter-spacing: 0.3px;
+        }
+
+        .gallery a:hover {
+            background-color: #78b957;
+            transform: translateY(-4px);
+        }
+
+        /* Flipping / rotating icon */
+        .gallery a:hover .gallery-icon {
+            transform: rotateY(180deg) scale(1.12);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .portfolio {
+                padding: 28px 16px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .gallery a {
+                min-height: 150px;
+            }
+
+            .list-tab {
+                gap: 5px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="portfolio">
+        <h2>MY PORTFOLIO</h2>
+        <div class="title-line"></div>
+
+        <!-- Icon được đặt trong danh sách danh mục -->
+        <ul class="list-tab fa-ul">
+            <li>
+                <a class="active" href="#">
+                    <span class="fa-li"><i class="fas fa-th-large" aria-hidden="true"></i></span>
+                    All
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa-li"><i class="fas fa-laptop-code" aria-hidden="true"></i></span>
+                    Web App
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa-li"><i class="fas fa-object-group" aria-hidden="true"></i></span>
+                    UI/UX
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa-li"><i class="fas fa-palette" aria-hidden="true"></i></span>
+                    Graphics Design
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa-li"><i class="fas fa-mobile-alt" aria-hidden="true"></i></span>
+                    Mobile App
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa-li"><i class="fas fa-tags" aria-hidden="true"></i></span>
+                    Branding
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa-li"><i class="fas fa-bullhorn" aria-hidden="true"></i></span>
+                    Marketing
+                </a>
+            </li>
+        </ul>
+
+        <!-- Gallery gồm 3 ô theo bố cục mẫu trong đề -->
+        <ul class="gallery">
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-code gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-paint-brush gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-mobile-alt gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-chart-line gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-camera gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-shopping-cart gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-bullhorn gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-lightbulb gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>
+                        <i class="fas fa-pen-nib gallery-icon" aria-hidden="true"></i>
+                        <span class="gallery-label">Học Web Chuẩn</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
