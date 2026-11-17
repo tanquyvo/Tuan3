@@ -43,5 +43,3 @@ Thực hành jQuery selectors, thao tác DOM, events, effects và yêu cầu GET
 
 ## Công nghệ
 HTML5, CSS3, JavaScript, jQuery (được sử dụng trong các bài thực hành Lab 10).
-
-> Lưu ý: GitHub Pages URL ở trên là URL dự kiến theo tên repository; cần bật Pages trong Settings và kiểm tra URL sau khi deploy.
